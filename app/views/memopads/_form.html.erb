@@ -1,0 +1,9 @@
+<%= form_for @memopad do |form| %>
+
+<%= form.label :title, "タイトル" %>
+<%= form.text_field :title %>
+<%= form.label :comment, "内容" %>
+<%= form.text_area :comment %>
+<%= form.submit "登録！" %>
+
+<% end %>

@@ -1,0 +1,24 @@
+memopads#index
+<br>
+
+<p><%= link_to "新規登録", :new_memopad %></p>
+
+
+<table class="table table-bordered">
+  <tr>
+    <th>作成日時</th>
+    <th>最終更新日時</th>
+    <th>タイトル</th>
+  </tr>
+	
+  <% @memopads.each do |memopad| %>
+  <tr>
+    <td><%= yymmddhhmmss_jp(memopad.created_at) %></td>
+    <td><%= yymmddhhmmss_jp(memopad.updated_at) %></td>
+    <td><%= link_to memopad.title, memopad %></td>
+  </tr>
+  <% end %>
+</table>
+
+
+

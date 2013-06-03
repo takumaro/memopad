@@ -1,0 +1,13 @@
+memopad#show
+
+<p><%= link_to "一覧に戻る", memopads_path %></p>
+<p><%= link_to "編集", edit_memopad_path(@memopad) %></p>
+
+
+<h3><%= @memopad.title %></h3>
+
+<p><%= @memopad.comment %></p>
+
+
+
+<p><%= link_to "削除", memopad_path(@memopad), method: :delete, confirm: "本当に削除しますか？", class: "btn btn-mini btn-danger" %></p>
